@@ -133,6 +133,9 @@ public class OrdenLavanderiaServiceImpl implements OrdenLavanderiaService {
         List<DetalleOrdenLavanderia> nuevas = new ArrayList<>();
         for (DetalleOrdenLavanderiaRequest r : requests) {
             DetalleOrdenLavanderia p = r.idPrenda() == null ? null : actuales.get(r.idPrenda());
+            if (r.idPrenda() != null && p == null) {
+                throw new InvalidEntryException("La prenda no pertenece a esta orden");
+            }
             if (p == null) p = new DetalleOrdenLavanderia();
             p.setOrden(orden);
             p.setServicio(servicioRepository.findById(r.idServicio())

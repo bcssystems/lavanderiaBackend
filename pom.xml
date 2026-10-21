@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.bcsystems</groupId>
-    <artifactId>bonds</artifactId>
+    <artifactId>lavanderia</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bonds</name>
-    <description>bonds</description>
+    <name>lavanderia</name>
+    <description>Sistema de gestión para lavandería</description>
     <url/>
     <licenses>
         <license/>
