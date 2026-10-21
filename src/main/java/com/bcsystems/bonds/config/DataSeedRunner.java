@@ -110,8 +110,10 @@ public class DataSeedRunner implements CommandLineRunner {
                  "KARDEX_VER",
                 "MOVIMIENTOS_INVENTARIO_VER",
                 "CANCELACIONES_VER",
-                "PROMOCIONES_VER",
-                "CONFIGURACION_VER")));
+                 "PROMOCIONES_VER",
+                 "SERVICIOS_VER", "SERVICIOS_CREAR", "SERVICIOS_EDITAR",
+                 "LAVANDERIA_VER", "LAVANDERIA_CREAR", "LAVANDERIA_EDITAR", "LAVANDERIA_COBRAR",
+                 "CONFIGURACION_VER")));
 
         for (var entry : permisosPorRol.entrySet()) {
             String nombre = entry.getKey();
@@ -342,7 +344,18 @@ public class DataSeedRunner implements CommandLineRunner {
                 new String[]{"PROMOCIONES_VER", "Ver Promociones"},
                 new String[]{"PROMOCIONES_CREAR", "Crear Promociones"},
                 new String[]{"PROMOCIONES_EDITAR", "Editar Promociones"},
-                new String[]{"PROMOCIONES_ELIMINAR", "Eliminar Promociones"}
+                 new String[]{"PROMOCIONES_ELIMINAR", "Eliminar Promociones"}
+        ));
+        map.put("SERVICIOS", List.of(
+                new String[]{"SERVICIOS_VER", "Ver Servicios"},
+                new String[]{"SERVICIOS_CREAR", "Crear Servicios"},
+                new String[]{"SERVICIOS_EDITAR", "Editar Servicios"}
+        ));
+        map.put("LAVANDERIA", List.of(
+                new String[]{"LAVANDERIA_VER", "Ver Gestión de lavado"},
+                new String[]{"LAVANDERIA_CREAR", "Crear órdenes de lavandería"},
+                new String[]{"LAVANDERIA_EDITAR", "Editar órdenes de lavandería"},
+                new String[]{"LAVANDERIA_COBRAR", "Enviar órdenes de lavandería a cobro"}
         ));
         map.put("CONFIGURACION", List.of(
                 new String[]{"CONFIGURACION_VER", "Ver Configuracion"},
